@@ -3,8 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import threading
-from gesture_controller import start_gesture_detection
-
+from backend.gesture_controller import start_gesture_detection
 sio = socketio.AsyncServer(async_mode="asgi", cors_allowed_origins="*")
 app = FastAPI()
 app_socket = socketio.ASGIApp(sio, other_asgi_app=app)

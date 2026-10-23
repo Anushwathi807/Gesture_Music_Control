@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 import asyncio
 import socketio  # for type hinting
-from gestures import GestureRecognizer
+from backend.gestures import GestureRecognizer
 
 # Initialize MediaPipe
 mp_hands = mp.solutions.hands
